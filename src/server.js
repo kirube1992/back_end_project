@@ -1,9 +1,9 @@
-const express = require("express");
+import express from "express";
+import movieRoutes from "./routes/movieRoutes.js";
+
 const app = express();
 
-app.get("/hello", (req, res) => {
-  res.json({ message: "Hello world" });
-});
+app.use("/movies", movieRoutes);
 
 const PORT = 5001;
 
